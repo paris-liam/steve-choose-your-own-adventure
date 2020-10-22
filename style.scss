@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Zilla+Slab);
+
+$brown: #C19A6B;
+$green:  #aed581;
+html {
+    font-size: 10px;;
+    padding: 0;
+    margin: 0;
+    font-family: 'Zilla Slab', serif;
+    color: black;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    color: $brown;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.header {
+    background-color: $brown;
+    width: 100%;
+    font-size: 3rem;
+    margin: 0;
+    padding: 5rem 0 2rem 0rem;
+
+    h1 {
+        padding-left: 3rem;
+    }
+}
+
+.main-body {
+    background-color: $green;
+    min-height: 77vh;
+    height: auto;
+    padding: 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}  
+
+.left-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.option-link {
+    font-size: 4rem;
+    padding-right: 3rem;
+    margin-bottom: 2rem;
+    &:before,
+    &:after {
+        background-size: 4rem;
+        background-size: cover;
+        display: inline-block;
+        width: 4rem; 
+        height: 4rem;
+        content: ""
+    }   
+    &:before {
+        content:"º";
+    }
+    &:hover {
+        &::before,
+        &::after {
+            background-image: url('images/giphy.gif');
+        }   
+        &::before {
+            content: ""
+        }
+    }
+}
+
+.index-options {
+    display: none;
+
+    &.show-option {
+        display: block;
+    }
+}
+
+
+@media(max-width: 600px) {
+
+    html {
+        font-size: 7px;
+    }
+    .main-body {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+    .left-section,
+    .right-section {
+        width: 100%;
+        margin: auto;
+    }
+}

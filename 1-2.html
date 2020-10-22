@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Steve's Dreamhouse</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class='header'>
+    <h1>Welcome To Steve's Dreamhouse</h1>
+</div>
+<section class='main-body'>
+
+<h2>here we go</h2>
+    <a class='index-options' id="A" href="/index2.html">
+        option 1
+    </a>
+    <a class='index-options' id="B" href="/index2.html">
+        option 2
+    </a>
+    <a class='index-options' id="C" href="/index2.html">
+        option 3
+    </a>
+</section>
+<script type="text/javascript">
+    console.log('hello');
+    var urlParams = new URLSearchParams(window.location.search);
+    urlParams.getAll('options').forEach((option) => {
+        document.querySelector(`#${option}`).classList += 'show-option';
+    })
+</script>
+</body>
