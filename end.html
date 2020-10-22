@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Steve's Dreamhouse</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <div class='header'>
+        <h1>Welcome To Steve's Dreamhouse</h1>
+    </div>
+    <section class='main-body'>
+        <h2>Ok i'll come clean with ya</h2>
+        <h3>I bought a house in gnome land</h3>
+        <h3>They're being major assholes and honestly its fucked how they want you to just assimilate to their culture</h3>
+        <h4>I'm gonna do my best to fend them off it's my fault i told you to buy this house anyway</h4>
+        <h5>So i'll probably die now</h5>
+        <h6>Good luck with everything!</h6>
+    </section>
+    <script type="text/javascript">
+        let first = localStorage.getItem('firstPath');
+        let second = localStorage.getItem('secondPath');
+        if(first === 'A' || first === 'B' || first === 'C') {
+            document.querySelector(`#${first}`).classList += ' hide-option';
+        } 
+        if(second === 'A' || second === 'B' || second === 'C') {
+            document.querySelector(`#${second}`).classList += ' hide-option';
+        } 
+    </script>
+</body>
