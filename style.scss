@@ -72,6 +72,7 @@ a {
 
     img {
         width: 100%;
+        max-width: 500px;
     }
 }
 
@@ -103,13 +104,16 @@ a {
 }
 
 .index-options {
-    display: none;
+    display: block;
 
-    &.show-option {
-        display: block;
+    &.hide-option {
+        display: none;
     }
 }
 
+#option-chosen {
+    color: blue;
+}
 
 @media(max-width: 600px) {
 

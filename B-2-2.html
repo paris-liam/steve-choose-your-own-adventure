@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Steve's Dreamhouse</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class='header'>
+    <h1>Welcome To Steve's Dreamhouse -- Watching A Movie!</h1>
+</div>
+<section class='main-body'>
+    <div class='left-section'>
+        <h2>Hell ya bro, you watched a movie by: <span id='option-chosen'></span> Their movie about trees and the battle with squirels is a national treasure we should all appreciate and take as Bible!!</h2>
+        <a class='option-link' href='/1-3'>Let's do something else!</a>
+    </div>
+    <div class='right-section'>
+        <img src="/images/success.png"/>
+    </div>
+</section>
+<script type="text/javascript">
+    let urlparams = new URLSearchParams(window.location.search);
+    chosen = urlparams.get('option');
+    document.querySelector('#option-chosen').innerHTML = chosen;
+</script>
+</body>

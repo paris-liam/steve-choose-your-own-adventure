@@ -10,23 +10,19 @@
     <h1>Welcome To Steve's Dreamhouse</h1>
 </div>
 <section class='main-body'>
-
-<h2>here we go</h2>
-    <a class='index-options' id="A" href="/index2.html">
-        option 1
-    </a>
-    <a class='index-options' id="B" href="/index2.html">
-        option 2
-    </a>
-    <a class='index-options' id="C" href="/index2.html">
-        option 3
-    </a>
+    <div class='left-section'>
+        <a class='index-options option-link' id="A" href='/A-2'>Whip up a pizza and some aperol spritz's in your giant kitchen!</a>
+        <a class='index-options option-link' id="B" href='/B-2'>Watch a classic flix in your own home movie theater!</a>
+        <a class='index-options option-link' id="C" href='/C-2'>Make some beautiful music in your own personal recording studio!</a>
+    </div>
+    <div class='right-section'>
+        <img src="/images/home2.png"/>
+    </div>
 </section>
 <script type="text/javascript">
-    console.log('hello');
-    var urlParams = new URLSearchParams(window.location.search);
-    urlParams.getAll('options').forEach((option) => {
-        document.querySelector(`#${option}`).classList += 'show-option';
-    })
+    let first = localStorage.getItem('firstPath');
+    if(first === 'A' || first === 'B' || first === 'C') {
+        document.querySelector(`#${first}`).classList += ' hide-option';
+    } 
 </script>
 </body>

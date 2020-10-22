@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Steve's Dreamhouse</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class='header'>
+    <h1>Welcome To Steve's Dreamhouse -- Making some Music!</h1>
+</div>
+<section class='main-body'>
+    <div class='left-section'>
+        <h2>Hell ya bro, you wrote a song about: <span id='option-chosen'></span> Maybe wasn't the best choice, maybe you should have wrote a song about tress? I bet some people would have liked that more</h2>
+        <a class='option-link' href='/1-2'>Let's do something else!</a>
+    </div>
+    <div class='right-section'>
+        <img src="/images/fail.jpeg"/>
+    </div>
+</section>
+<script type="text/javascript">
+    let urlparams = new URLSearchParams(window.location.search);
+    chosen = urlparams.get('option');
+    document.querySelector('#option-chosen').innerHTML = chosen;
+</script>
+</body>
